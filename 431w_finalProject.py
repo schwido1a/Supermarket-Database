@@ -11,7 +11,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 
-def menu():
+def userManuel():
     print("Welcome to GroceryStore.app, which table would you like to access:")
     print("1. Items\n"
           "2. Discount\n"
@@ -27,7 +27,7 @@ def menu():
 
 def main():
     while True:
-        choice = menu()
+        choice = userManuel()
         if choice == '1':
             print("What do you want to do with the table:")
             print("1. Add a record\n"
@@ -154,23 +154,23 @@ def main():
             else:
                 continue
         elif choice == '3':
-            print("")
+            print("Function is currently unavaliable, please come back later!")
         elif choice == '4':
-            print("")
+            print("This table is still under construction")
         elif choice == '5':
-            print("")
+            print("This database is not ready ye")
         elif choice == '6':
-            print("")
+            print("It's 7pm and we are closed")
         elif choice == '7':
-            print("")
+            print("I will get back to you later")
         elif choice == '8':
-            print("")
+            print("Last one, hang in there!")
         elif choice == '9':
             print("Thank you for using this app, hope we get full marks on everything!")
             break
 
         else:
-            print("Wrong number!")
+            print("Wrong number, only input number from 1-9!")
     mycursor.close()
     mydb.close()
 
